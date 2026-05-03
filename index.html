@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MATRUBHUMI INFRA | Real Estate</title>
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:Arial, Helvetica, sans-serif; }
+
+    body {
+      background:#0b1d16;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .hero {
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      background:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
+      url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero h1 {
+      font-size:60px;
+      color:#ffd36a;
+      margin-bottom:15px;
+    }
+
+    .hero p {
+      font-size:22px;
+      margin-bottom:30px;
+    }
+
+    .enter-btn {
+      padding:14px 35px;
+      border:none;
+      background:#ffd36a;
+      color:#111;
+      font-size:18px;
+      border-radius:30px;
+      cursor:pointer;
+    }
+
+    .main-content {
+      padding:80px 8%;
+      background:linear-gradient(135deg,#10251d,#173d2e,#0d1713);
+    }
+
+    .section-title {
+      text-align:center;
+      font-size:40px;
+      color:#ffd36a;
+      margin-bottom:20px;
+    }
+
+    .section-subtitle {
+      text-align:center;
+      max-width:800px;
+      margin:0 auto 60px;
+      font-size:18px;
+      color:#ddd;
+    }
+
+    .cards {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+    }
+
+    .card {
+      background:rgba(255,255,255,0.08);
+      border-radius:25px;
+      padding:30px;
+      text-align:center;
+      animation:morph 6s infinite ease-in-out;
+    }
+
+    .card img {
+      width:100%;
+      height:190px;
+      object-fit:cover;
+      border-radius:20px;
+      margin-bottom:20px;
+    }
+
+    .card h3 {
+      color:#ffd36a;
+      font-size:26px;
+      margin-bottom:10px;
+    }
+
+    .contact {
+      margin-top:80px;
+      text-align:center;
+      background:rgba(0,0,0,0.25);
+      padding:40px;
+      border-radius:25px;
+    }
+
+    footer {
+      text-align:center;
+      padding:25px;
+      background:#06100c;
+    }
+
+    @keyframes morph {
+      0% { border-radius:25px 45px 25px 45px; }
+      50% { border-radius:45px 25px 45px 25px; }
+      100% { border-radius:25px 45px 25px 45px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div>
+    <h1>MATRUBHUMI INFRA</h1>
+    <p>Your Trusted Partner for Houses, Plots & Lands</p>
+    <a href="#properties"><button class="enter-btn">Enter Website</button></a>
+  </div>
+</section>
+
+<section class="main-content" id="properties">
+  <h2 class="section-title">Welcome to MATRUBHUMI INFRA</h2>
+  <p class="section-subtitle">
+    We help customers buy and sell houses, villas, plots, and real-estate investments.
+  </p>
+
+  <!-- ✅ UPDATED IMAGES HERE -->
+  <div class="cards">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80">
+      <h3>Luxury Houses</h3>
+      <p>Modern houses with premium design and spacious interiors.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80">
+      <h3>Villas & Homes</h3>
+      <p>Beautiful villas and independent homes in prime locations.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80">
+      <h3>Residential Projects</h3>
+      <p>Top apartments and buildings for living and investment.</p>
+    </div>
+
+  </div>
+
+  <div class="contact">
+    <h2>Contact Us</h2>
+    <p><strong>MATRUBHUMI INFRA</strong></p>
+    <p>Phone: +91 XXXXX XXXXX</p>
+    <p>Email: matrubhumiinfra@example.com</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 MATRUBHUMI INFRA
+</footer>
+
+</body>
+</html>
