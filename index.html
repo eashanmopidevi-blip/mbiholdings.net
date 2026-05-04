@@ -46,6 +46,12 @@
       background:#1c2c25;
       padding:15px;
       border-radius:15px;
+      transition:0.3s;
+    }
+
+    .box:hover {
+      transform:scale(1.05);
+      cursor:pointer;
     }
 
     .box img {
@@ -92,12 +98,14 @@
 
   <div class="grid">
 
-    <div class="box">
+    <!-- ✅ ONLY THIS ONE OPENS VIDEO -->
+    <div class="box" onclick="openVideo()">
       <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80">
       <h3>2BHK Flat</h3>
       <p>Kukatpalli<br>₹65 Lakhs</p>
     </div>
 
+    <!-- ❌ NORMAL BOX -->
     <div class="box">
       <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80">
       <h3>3BHK Flat</h3>
@@ -133,6 +141,13 @@
 </div>
 
 <a href="https://wa.me/918688553765" class="whatsapp">💬</a>
+
+<!-- ✅ VIDEO SCRIPT -->
+<script>
+function openVideo() {
+  window.open("https://youtu.be/MimyrOnAU7I", "_blank");
+}
+</script>
 
 </body>
 </html>
