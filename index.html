@@ -78,7 +78,6 @@
       border-radius:25px;
       padding:30px;
       text-align:center;
-      cursor:pointer;
       transition:0.3s;
     }
 
@@ -101,50 +100,9 @@
       margin-bottom:10px;
     }
 
-    .details {
-      display:none;
-      margin-top:60px;
-      background:rgba(255,255,255,0.08);
-      padding:30px;
-      border-radius:25px;
-    }
-
-    .details h2 {
-      color:#ffd36a;
-      text-align:center;
-      margin-bottom:25px;
-    }
-
-    .property-list {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:20px;
-    }
-
-    .property {
-      background:rgba(0,0,0,0.25);
-      padding:18px;
-      border-radius:18px;
-      cursor:pointer;
-      transition:0.3s;
-    }
-
-    .property:hover {
-      transform:scale(1.04);
-      background:rgba(255,255,255,0.12);
-    }
-
-    .property img {
-      width:100%;
-      height:180px;
-      object-fit:cover;
-      border-radius:14px;
-      margin-bottom:15px;
-    }
-
-    .property h3 {
-      color:#ffd36a;
-      margin-bottom:8px;
+    .card p {
+      font-size:16px;
+      color:#ddd;
     }
 
     .contact {
@@ -189,66 +147,30 @@
 
 <section class="main-content" id="properties">
   <h2 class="section-title">Our Properties</h2>
-  <p class="section-subtitle">Click Luxury Houses to view 5 house options.</p>
+  <p class="section-subtitle">
+    We provide houses, villas, plots, and real estate investments with trust.
+  </p>
 
   <div class="cards">
 
-    <div class="card" onclick="showLuxuryHouses()">
+    <div class="card">
       <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80">
       <h3>Luxury Houses</h3>
-      <p>Click to view 5 luxury houses</p>
+      <p>Explore premium houses and apartments.</p>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80">
       <h3>Villas & Homes</h3>
-      <p>More villa details coming soon</p>
+      <p>Independent villas and modern homes.</p>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80">
       <h3>Residential Projects</h3>
-      <p>More project details coming soon</p>
+      <p>Top residential and investment projects.</p>
     </div>
 
-  </div>
-
-  <div class="details" id="luxuryHouses">
-    <h2>Luxury Houses</h2>
-
-    <div class="property-list">
-
-      <div class="property" onclick="openVideo()">
-        <img src="image1.jpg" alt="Premium Flat">
-        <h3>Premium Flat</h3>
-        <p>Location: Kukatpalli<br>Price: ₹65 Lakhs<br>Click image to watch video</p>
-      </div>
-
-      <div class="property" onclick="openVideo()">
-        <img src="image2.jpg" alt="Modern Apartment">
-        <h3>Modern Apartment</h3>
-        <p>Location: Pragathi Nagar<br>Price: ₹80 Lakhs<br>Click image to watch video</p>
-      </div>
-
-      <div class="property" onclick="openVideo()">
-        <img src="image3.jpg" alt="Pool View Flat">
-        <h3>Pool View Flat</h3>
-        <p>Location: Miyapur<br>Price: ₹1.1 Cr<br>Click image to watch video</p>
-      </div>
-
-      <div class="property" onclick="openVideo()">
-        <img src="image4.jpg" alt="Gated Community Flat">
-        <h3>Gated Community Flat</h3>
-        <p>Location: Hitech City<br>Price: ₹1.5 Cr<br>Click image to watch video</p>
-      </div>
-
-      <div class="property" onclick="openVideo()">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Luxury House">
-        <h3>Luxury Family House</h3>
-        <p>Location: Gachibowli<br>Price: ₹2 Cr<br>Click image to watch video</p>
-      </div>
-
-    </div>
   </div>
 
   <div class="contact">
@@ -265,17 +187,6 @@
 <footer>
   © 2026 MATRUBHUMI INFRA
 </footer>
-
-<script>
-  function showLuxuryHouses() {
-    document.getElementById("luxuryHouses").style.display = "block";
-    document.getElementById("luxuryHouses").scrollIntoView({ behavior: "smooth" });
-  }
-
-  function openVideo() {
-    window.open("https://youtu.be/-SiAPFOUrT8", "_blank");
-  }
-</script>
 
 </body>
 </html>
