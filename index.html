@@ -6,187 +6,133 @@
   <title>MatrubhumiInfra.com</title>
 
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:Arial, Helvetica, sans-serif; }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:Arial; }
 
-    body {
-      background:#0b1d16;
-      color:white;
-      overflow-x:hidden;
-    }
+    body { background:#0b1d16; color:white; }
 
     .hero {
-      min-height:100vh;
+      height:100vh;
       display:flex;
-      align-items:center;
       justify-content:center;
+      align-items:center;
       text-align:center;
-      background:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
+      background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),
       url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
       background-size:cover;
-      background-position:center;
     }
 
-    .hero h1 {
-      font-size:60px;
-      color:#ffd36a;
-      margin-bottom:15px;
-    }
+    .hero h1 { font-size:55px; color:#ffd36a; }
+    .hero p { margin:15px 0; }
 
-    .hero p {
-      font-size:22px;
-      margin-bottom:30px;
-    }
-
-    .enter-btn {
-      padding:14px 35px;
-      border:none;
+    .btn {
+      padding:12px 25px;
       background:#ffd36a;
-      color:#111;
-      font-size:18px;
-      border-radius:30px;
+      border:none;
+      border-radius:25px;
       cursor:pointer;
     }
 
-    .main-content {
-      padding:80px 8%;
-      background:linear-gradient(135deg,#10251d,#173d2e,#0d1713);
-    }
+    .main { padding:60px 8%; }
 
-    .section-title {
-      text-align:center;
-      font-size:40px;
-      color:#ffd36a;
-      margin-bottom:20px;
-    }
+    .title { text-align:center; color:#ffd36a; font-size:35px; margin-bottom:40px; }
 
-    .section-subtitle {
-      text-align:center;
-      max-width:800px;
-      margin:0 auto 60px;
-      font-size:18px;
-      color:#ddd;
-    }
-
-    .cards {
+    .grid {
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:30px;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
     }
 
-    .card {
-      background:rgba(255,255,255,0.08);
-      border-radius:25px;
-      padding:30px;
-      text-align:center;
-      transition:0.3s;
+    .box {
+      background:#1c2c25;
+      padding:15px;
+      border-radius:15px;
     }
 
-    .card:hover {
-      transform:scale(1.05);
-      background:rgba(255,255,255,0.15);
-    }
-
-    .card img {
+    .box img {
       width:100%;
-      height:190px;
+      height:170px;
       object-fit:cover;
-      border-radius:20px;
-      margin-bottom:20px;
+      border-radius:10px;
     }
 
-    .card h3 {
-      color:#ffd36a;
-      font-size:26px;
-      margin-bottom:10px;
-    }
-
-    .card p {
-      font-size:16px;
-      color:#ddd;
-    }
+    .box h3 { color:#ffd36a; margin:10px 0; }
 
     .contact {
-      margin-top:80px;
+      margin-top:60px;
       text-align:center;
-      background:rgba(0,0,0,0.25);
-      padding:40px;
-      border-radius:25px;
     }
 
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      font-size: 28px;
-      padding: 15px 18px;
-      border-radius: 50%;
-      text-decoration: none;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
-      z-index: 1000;
-    }
-
-    footer {
-      text-align:center;
-      padding:25px;
-      background:#06100c;
+    .whatsapp {
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:white;
+      padding:15px;
+      border-radius:50%;
+      font-size:25px;
+      text-decoration:none;
     }
   </style>
 </head>
 
 <body>
 
-<section class="hero">
+<div class="hero">
   <div>
     <h1>MatrubhumiInfra.com</h1>
-    <p>Your Trusted Partner for Houses, Plots & Lands</p>
-    <a href="#properties"><button class="enter-btn">Enter Website</button></a>
+    <p>Your Trusted Real Estate Partner</p>
+    <a href="#list"><button class="btn">View Properties</button></a>
   </div>
-</section>
+</div>
 
-<section class="main-content" id="properties">
-  <h2 class="section-title">Our Properties</h2>
-  <p class="section-subtitle">
-    We provide houses, villas, plots, and real estate investments with trust.
-  </p>
+<div class="main" id="list">
 
-  <div class="cards">
+  <h2 class="title">Available Properties</h2>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80">
-      <h3>Luxury Houses</h3>
-      <p>Explore premium houses and apartments.</p>
-    </div>
+  <div class="grid">
 
-    <div class="card">
+    <div class="box">
       <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80">
-      <h3>Villas & Homes</h3>
-      <p>Independent villas and modern homes.</p>
+      <h3>2BHK Flat</h3>
+      <p>Kukatpalli<br>₹65 Lakhs</p>
     </div>
 
-    <div class="card">
+    <div class="box">
       <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80">
-      <h3>Residential Projects</h3>
-      <p>Top residential and investment projects.</p>
+      <h3>3BHK Flat</h3>
+      <p>Miyapur<br>₹95 Lakhs</p>
+    </div>
+
+    <div class="box">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80">
+      <h3>Luxury Villa</h3>
+      <p>Gachibowli<br>₹2.1 Cr</p>
+    </div>
+
+    <div class="box">
+      <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80">
+      <h3>Open Plot</h3>
+      <p>Patancheru<br>₹35 Lakhs</p>
+    </div>
+
+    <div class="box">
+      <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=900&q=80">
+      <h3>Apartment Project</h3>
+      <p>Pragathi Nagar<br>From ₹60 Lakhs</p>
     </div>
 
   </div>
 
   <div class="contact">
     <h2>Contact Us</h2>
-    <p><strong>MATRUBHUMI INFRA</strong></p>
-    <p>Phone: +91 8688553765</p>
-    <p>Email: eashanmopidevi@gmail.com</p>
+    <p>📞 8688553765</p>
+    <p>📧 eashanmopidevi@gmail.com</p>
   </div>
 
-</section>
+</div>
 
-<a href="https://wa.me/918688553765" target="_blank" class="whatsapp-btn">💬</a>
-
-<footer>
-  © 2026 MATRUBHUMI INFRA
-</footer>
+<a href="https://wa.me/918688553765" class="whatsapp">💬</a>
 
 </body>
 </html>
