@@ -59,6 +59,14 @@
       margin-bottom:20px;
     }
 
+    .section-subtitle {
+      text-align:center;
+      max-width:800px;
+      margin:0 auto 60px;
+      font-size:18px;
+      color:#ddd;
+    }
+
     .cards {
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -71,11 +79,12 @@
       padding:30px;
       text-align:center;
       cursor:pointer;
+      animation:morph 6s infinite ease-in-out;
       transition:0.3s;
     }
 
     .card:hover {
-      transform:scale(1.05);
+      transform:scale(1.04);
       background:rgba(255,255,255,0.15);
     }
 
@@ -90,6 +99,46 @@
     .card h3 {
       color:#ffd36a;
       font-size:26px;
+      margin-bottom:10px;
+    }
+
+    .details {
+      display:none;
+      margin-top:60px;
+      background:rgba(255,255,255,0.08);
+      padding:30px;
+      border-radius:25px;
+    }
+
+    .details h2 {
+      color:#ffd36a;
+      margin-bottom:25px;
+      text-align:center;
+    }
+
+    .property-list {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:20px;
+    }
+
+    .property {
+      background:rgba(0,0,0,0.25);
+      padding:20px;
+      border-radius:18px;
+      line-height:1.7;
+    }
+
+    .property img {
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      border-radius:14px;
+      margin-bottom:15px;
+    }
+
+    .property h3 {
+      color:#ffd36a;
       margin-bottom:10px;
     }
 
@@ -120,6 +169,12 @@
       padding:25px;
       background:#06100c;
     }
+
+    @keyframes morph {
+      0% { border-radius:25px 45px 25px 45px; }
+      50% { border-radius:45px 25px 45px 25px; }
+      100% { border-radius:25px 45px 25px 45px; }
+    }
   </style>
 </head>
 
@@ -134,28 +189,85 @@
 </section>
 
 <section class="main-content" id="properties">
-  <h2 class="section-title">Our Properties</h2>
+  <h2 class="section-title">Welcome to MATRUBHUMI INFRA</h2>
+  <p class="section-subtitle">
+    Click any property category below to view available property details.
+  </p>
 
   <div class="cards">
 
-    <div class="card" onclick="openVideo()">
+    <div class="card" onclick="showDetails('luxury')">
       <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80">
       <h3>Luxury Houses</h3>
-      <p>Click to watch property video</p>
+      <p>Click to view luxury flat images and details.</p>
     </div>
 
-    <div class="card" onclick="openVideo()">
+    <div class="card" onclick="showDetails('villas')">
       <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80">
       <h3>Villas & Homes</h3>
-      <p>Click to watch property video</p>
+      <p>Click to view villa details.</p>
     </div>
 
-    <div class="card" onclick="openVideo()">
+    <div class="card" onclick="showDetails('residential')">
       <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80">
       <h3>Residential Projects</h3>
-      <p>Click to watch property video</p>
+      <p>Click to view project details.</p>
     </div>
 
+  </div>
+
+  <div class="details" id="luxury">
+    <h2>Luxury Houses - Flat Gallery</h2>
+
+    <div class="property-list">
+
+      <div class="property">
+        <img src="image1.jpg" alt="Premium Flat">
+        <h3>Premium Flat</h3>
+        <p>Location: Kukatpalli<br>Size: 1150 sq.ft<br>Price: ₹65 Lakhs<br>Status: Ready to Move</p>
+      </div>
+
+      <div class="property">
+        <img src="image2.jpg" alt="Modern Apartment">
+        <h3>Modern Apartment</h3>
+        <p>Location: Pragathi Nagar<br>Size: 1450 sq.ft<br>Price: ₹80 Lakhs<br>Status: Available</p>
+      </div>
+
+      <div class="property">
+        <img src="image3.jpg" alt="Luxury Pool View Flat">
+        <h3>Luxury Pool View Flat</h3>
+        <p>Location: Miyapur<br>Size: 1800 sq.ft<br>Price: ₹1.1 Cr<br>Status: Ready to Move</p>
+      </div>
+
+      <div class="property">
+        <img src="image4.jpg" alt="Gated Community Flat">
+        <h3>Gated Community Flat</h3>
+        <p>Location: Hitech City<br>Size: 2200 sq.ft<br>Price: ₹1.5 Cr<br>Status: Limited</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="details" id="villas">
+    <h2>Villas & Homes - Property Information</h2>
+    <div class="property-list">
+      <div class="property"><h3>Independent Villa</h3><p>Location: Bachupally<br>Size: 2200 sq.ft<br>Price: ₹1.6 Cr<br>Status: Ready</p></div>
+      <div class="property"><h3>Duplex Villa</h3><p>Location: Tellapur<br>Size: 3000 sq.ft<br>Price: ₹2.8 Cr<br>Status: Available</p></div>
+      <div class="property"><h3>Gated Community Villa</h3><p>Location: Mokila<br>Size: 2800 sq.ft<br>Price: ₹2.2 Cr<br>Status: Booking Open</p></div>
+      <div class="property"><h3>Premium Family Home</h3><p>Location: Kompally<br>Size: 2600 sq.ft<br>Price: ₹1.9 Cr<br>Status: Ready</p></div>
+      <div class="property"><h3>Luxury Triplex Villa</h3><p>Location: Shankarpally<br>Size: 3500 sq.ft<br>Price: ₹3.5 Cr<br>Status: Limited</p></div>
+    </div>
+  </div>
+
+  <div class="details" id="residential">
+    <h2>Residential Projects - Project Information</h2>
+    <div class="property-list">
+      <div class="property"><h3>Apartment Project</h3><p>Location: Pragathi Nagar<br>Units: 2BHK & 3BHK<br>Price: From ₹60 Lakhs<br>Status: Booking Open</p></div>
+      <div class="property"><h3>Gated Community Flats</h3><p>Location: Kukatpalli<br>Units: 3BHK<br>Price: From ₹90 Lakhs<br>Status: Available</p></div>
+      <div class="property"><h3>Open Plot Venture</h3><p>Location: Patancheru<br>Size: 150-300 sq.yds<br>Price: Contact Us<br>Status: HMDA Layout</p></div>
+      <div class="property"><h3>Residential Tower</h3><p>Location: Miyapur<br>Units: 2BHK, 3BHK<br>Price: From ₹75 Lakhs<br>Status: Under Construction</p></div>
+      <div class="property"><h3>Premium Housing Project</h3><p>Location: Gachibowli<br>Units: Luxury Flats<br>Price: From ₹1.4 Cr<br>Status: Pre-launch</p></div>
+    </div>
   </div>
 
   <div class="contact">
@@ -164,6 +276,7 @@
     <p>Phone: +91 8688553765</p>
     <p>Email: eashanmopidevi@gmail.com</p>
   </div>
+
 </section>
 
 <a href="https://wa.me/918688553765" target="_blank" class="whatsapp-btn">💬</a>
@@ -173,9 +286,14 @@
 </footer>
 
 <script>
-function openVideo() {
-  window.open("https://youtu.be/-SiAPFOUrT8", "_blank");
-}
+  function showDetails(type) {
+    document.getElementById("luxury").style.display = "none";
+    document.getElementById("villas").style.display = "none";
+    document.getElementById("residential").style.display = "none";
+
+    document.getElementById(type).style.display = "block";
+    document.getElementById(type).scrollIntoView({ behavior: "smooth" });
+  }
 </script>
 
 </body>
